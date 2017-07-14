@@ -32,11 +32,12 @@ int main()
     /*Exercise 1.9
       write a program to copy its input to its output, replacing each string of one or more blanks by a single blank
      
-     Look at your program as a machine that moves between different states as it iterates over the input.
+      Hint from SO:
+        Look at your program as a machine that moves between different states as it iterates over the input.
 
-     It reads the input one character at a time. If it sees anything other than a blank, it just prints the character it sees. If it sees a blank, it shifts to a different state. In that state, it prints one blank, and then doesn't print blanks if it sees them. Then, it continues reading the input, but ignores all blanks it sees--until it hits a character that isn't a blank, at which point it shifts back to the first state.
+        It reads the input one character at a time. If it sees anything other than a blank, it just prints the character it sees. If it sees a blank, it shifts to a different state. In that state, it prints one blank, and then doesn't print blanks if it sees them. Then, it continues reading the input, but ignores all blanks it sees--until it hits a character that isn't a blank, at which point it shifts back to the first state.
      
-     */
+     
     int c, bl;
 
     bl = 0;
@@ -55,6 +56,29 @@ int main()
         }
 
         putchar(c);
+    }*/
+
+    /*Exercise 1.10
+        Write a prog to copy input to output and replace tab with \t backspace with \b and \ with \\*/
+
+    int c;
+
+    while((c = getchar()) != EOF)
+    {
+        if(c == '\t')
+        {
+            printf(" \\t ");
+        }
+        else if(c == '\b')
+        {
+            printf(" \\b ");
+        }
+        else if(c == '\\')
+        {
+            printf(" \\ ");
+        }
+        else
+            putchar(c);
     }
 
     return 0;
