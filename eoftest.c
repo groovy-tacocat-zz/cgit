@@ -13,7 +13,7 @@ int main()
     printf("%d\n", c);
     */
 
-    //Exercise 1.7
+    /*Exercise 1.7
     //WRite a program to print the value of EOF
 
     while((c = getchar()) != EOF)
@@ -22,6 +22,8 @@ int main()
     }
     
     printf("EOF is: %d\n", c);
+    */
+
 
     return 0;
 }
